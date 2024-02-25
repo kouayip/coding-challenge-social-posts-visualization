@@ -1,0 +1,21 @@
+@import "breakpoints";
+@import "base";
+@import "typography";
+@import "post";
+
+.container {
+  padding: 1rem;
+  width: 100%;
+
+  .respond-min(@screen-lg, {
+    padding: 2rem;
+  });
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mb-2 {
+  margin-bottom: 3rem;
+}

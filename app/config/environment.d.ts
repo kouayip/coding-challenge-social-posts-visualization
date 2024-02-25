@@ -1,6 +1,6 @@
 /**
  * Type declarations for
- *    import config from 'my-typescript-app/config/environment'
+ *    import config from '~/config/environment'
  */
 declare const config: {
   environment: string;
@@ -8,7 +8,11 @@ declare const config: {
   podModulePrefix: string;
   locationType: 'history' | 'hash' | 'none';
   rootURL: string;
-  APP: Record<string, unknown>;
+  APP: {
+    name: string;
+    version: string;
+    POST_STREAM_URL: string;
+  };
 };
 
 export default config;

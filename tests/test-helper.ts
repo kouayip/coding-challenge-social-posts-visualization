@@ -1,5 +1,5 @@
-import Application from 'my-typescript-app/app';
-import config from 'my-typescript-app/config/environment';
+import Application from 'coding-challenge-social-posts-visualization/app';
+import config from 'coding-challenge-social-posts-visualization/config/environment';
 import * as QUnit from 'qunit';
 import { setApplication } from '@ember/test-helpers';
 import { setup } from 'qunit-dom';

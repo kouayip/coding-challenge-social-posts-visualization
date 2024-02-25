@@ -1,0 +1,8 @@
+<main class="container">
+  <h1 class="poppins-semibold text-center mb-2">Commit Activity by Day and Hour</h1>
+  <div class="post-visualization-container">
+    {{#each this.postTypes as |type|}}
+      <PostVisualization @eventType={{type}} />
+    {{/each}}
+  </div>
+</main>

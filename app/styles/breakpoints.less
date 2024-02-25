@@ -1,0 +1,13 @@
+@screen-sm: 480px;
+@screen-md: 768px;
+@screen-lg: 976px;
+
+// Mixin that will wrap our content in a media query
+.respond-min(@width, @rules) {
+  /* stylelint-disable less/color-no-invalid-hex */
+  @media screen and (min-width: @width) {
+    @rules();
+  }
+
+  /* stylelint-enable less/color-no-invalid-hex */
+}

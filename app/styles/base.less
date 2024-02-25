@@ -1,0 +1,39 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  font-synthesis: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex: 1 1 auto;
+  justify-content: center;
+  font-family: Poppins, sans-serif;
+}
+
+h1 {
+  font-size: 2.4em;
+  line-height: 1.1;
+
+  .respond-min(@screen-lg, {
+    font-size: 3.2em;
+  });
+}

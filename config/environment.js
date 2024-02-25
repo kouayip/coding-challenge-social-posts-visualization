@@ -2,7 +2,7 @@
 
 module.exports = function (environment) {
   const ENV = {
-    modulePrefix: 'my-typescript-app',
+    modulePrefix: 'coding-challenge-social-posts-visualization',
     environment,
     rootURL: '/',
     locationType: 'history',
@@ -17,6 +17,7 @@ module.exports = function (environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+      POST_STREAM_URL: process.env.SOCIAL_POST_STREAM_URL,
     },
   };
 

@@ -6,9 +6,15 @@
     // work with TypeScript.
     "baseUrl": ".",
     "paths": {
-      "my-typescript-app/tests/*": ["tests/*"],
-      "my-typescript-app/*": ["app/*"],
-      "*": ["types/*"]
+      "coding-challenge-social-posts-visualization/tests/*": [
+        "tests/*"
+      ],
+      "coding-challenge-social-posts-visualization/*": [
+        "app/*"
+      ],
+      "*": [
+        "types/*"
+      ]
     }
   }
 }

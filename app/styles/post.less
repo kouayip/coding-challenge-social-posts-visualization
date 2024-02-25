@@ -1,0 +1,24 @@
+.post-visualization-container {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 1fr;
+
+  .respond-min(@screen-lg, {
+    grid-template-columns: 1fr 1fr;
+  });
+}
+
+.post-visualization-card {
+  @padding: 1.5rem;
+  @radius: 8px;
+
+  padding: @padding;
+  border-radius: @radius;
+  box-shadow: 0 8px 36px 0 color-mod(black alpha(10%));
+}
+
+.post-visualization-title {
+  padding-left: 0.6rem;
+  padding-right: 0.6rem;
+  margin-bottom: 1rem;
+}
