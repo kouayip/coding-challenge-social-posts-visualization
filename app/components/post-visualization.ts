@@ -25,10 +25,10 @@ export default class PostVisualizationComponent extends Component<Args> {
     if (!ctx) throw new Error('Canvas context is required');
 
     // Labels for the days of the week on the Y axis of the graph.
-    const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+    const dayLabels = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 
     // Time of day labels for the X axis of the graph.
-    const times = [
+    const timeLabels = [
       '12am',
       '1',
       '2',
@@ -82,7 +82,7 @@ export default class PostVisualizationComponent extends Component<Args> {
             ticks: {
               stepSize: 1,
               callback: (value) => {
-                return times[value as number];
+                return timeLabels[value as number];
               },
             },
             grid: {
@@ -97,11 +97,26 @@ export default class PostVisualizationComponent extends Component<Args> {
             max: 7,
             ticks: {
               callback: (value) => {
-                return days[value as number];
+                return dayLabels[value as number];
               },
             },
             grid: {
               display: false, // Hide the Y axis grid
+            },
+          },
+        },
+        plugins: {
+          tooltip: {
+            callbacks: {
+              label: (tooltipItems) => {
+                const { x, y, _custom } = tooltipItems.parsed;
+
+                // format date to prefix meridian period
+                let time = timeLabels[x]?.replace(/(am|pm)/, '') + ' ';
+                time += x < Math.floor(timeLabels.length / 2) ? 'AM' : 'PM';
+
+                return `${_custom} posts on ${dayLabels[y]}. at ${time}`; // ex: 10 posts on Monday at 1:00 AM
+              },
             },
           },
         },
