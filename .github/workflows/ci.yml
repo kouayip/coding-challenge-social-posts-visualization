@@ -43,5 +43,7 @@ jobs:
           cache: npm
       - name: Install Dependencies
         run: npm ci
+      - name: Copy env
+        run: mv .env.test .env
       - name: Run Tests
         run: npm test
