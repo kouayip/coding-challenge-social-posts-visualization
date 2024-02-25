@@ -1,7 +1,5 @@
 # Coding Challenge Social Posts Visualization
 
----
-
 ## Introduction
 
 This front-end application provides a user-friendly way to visualize social media posts based on the day of the week, hour of the day, and the volume of posts. It fetches real-time data from the Upfluence API endpoint using Server-Sent Events (SSE) technology and updates the visualization accordingly.
@@ -30,8 +28,6 @@ Although the current implementation meets the functional requirements, there are
 2. Simplicity vs Customization: The choice of using Chart.js for the punch card visualization offered simplicity and ease of implementation. However, it might limit the level of customization compared to more low-level libraries like D3.js. This trade-off was made for quicker development time and easier maintenance.
 3. Testing Coverage: While comprehensive unit tests were implemented for the SseService, there might be areas where additional testing could improve robustness, such as edge cases or error handling scenarios.
 4. Improved design: Improvements to the overall design and user interface could make the application more attractive and intuitive.
-
----
 
 ## Prerequisites
 
