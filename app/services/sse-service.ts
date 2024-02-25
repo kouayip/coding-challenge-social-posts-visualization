@@ -18,7 +18,7 @@ export default class SseServiceService extends Service.extend(Evented) {
 
     // Check that the URL of the streaming server exists
     if (!streamServerUrl) {
-      throw new Error('STREAM_SERVER is not defined in environment');
+      throw new Error('POST_STREAM_URL is not defined in environment');
     }
 
     // Creation of the EventSource for the SSE connection
